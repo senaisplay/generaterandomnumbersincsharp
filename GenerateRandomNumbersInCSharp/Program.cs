@@ -6,10 +6,15 @@ namespace GenerateRandomNumbersInCSharp
     {
         static void Main(string[] args)
         {
+            var messages = new[]
+            {
+                "Olá, como vai você?",
+                "Em que podemos ajudá-lo?",
+                "Precisa de alguma ajuda?",
+            };
             var random = new Random();
-            // This variable holds the random number
-            var randomNumber = random.Next();
-            Console.WriteLine(randomNumber);
+            var message = messages[random.Next(0, messages.Length)];
+            Console.WriteLine(message);
         }
     }
 }
